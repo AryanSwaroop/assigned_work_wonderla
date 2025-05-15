@@ -5,19 +5,19 @@ const categories = [
   {
     label: "Land",
     color: "#FFD100",
-    icon: "/lovable-uploads/807fa2aa-fe9e-4c50-b110-095b8ddb527f.png",
+    icon: "/land.svg",
     count: 73,
   },
   {
     label: "Water",
     color: "#FFD100",
-    icon: "/lovable-uploads/807fa2aa-fe9e-4c50-b110-095b8ddb527f.png",
+    icon: "/water.svg",
     count: 54,
   },
   {
     label: "Kids",
     color: "#FFD100",
-    icon: "/lovable-uploads/807fa2aa-fe9e-4c50-b110-095b8ddb527f.png",
+    icon: "/kids.svg",
     count: 35,
   },
 ];
@@ -52,7 +52,7 @@ export default function CategoryArcNav({ active, onSelect }: Props) {
   });
 
   // Find position for a category
-  const getPositionForCategory = (categoryLabel) => {
+  const getPositionForCategory = (categoryLabel : string) => {
     return positions.find(p => p.label === categoryLabel) || positions[0];
   };
 
@@ -88,34 +88,11 @@ export default function CategoryArcNav({ active, onSelect }: Props) {
       setAnimationType("custom");
       
       // Set starting position explicitly to Kids position
-      x.set(fromPosition.x);
       y.set(fromPosition.y);
-      
-      // First, move horizontally towards Water's x-position but at Kids' y-position
-      const waterPos = getPositionForCategory("Water");
-      
-      // First animation: move horizontally to be aligned with Water
-      animate(x, waterPos.x, { 
-        type: "spring", 
-        stiffness: 400, 
-        damping: 30,
-        duration: 0.4
-      }).then(() => {
-        // Second animation: move both horizontally and vertically to Land position
-        animate(x, toPosition.x, {
-          type: "spring",  
-          stiffness: 400,
-          damping: 30,
-          duration: 0.4
-        });
         
         animate(y, toPosition.y, {
-          type: "spring",
-          stiffness: 400,
-          damping: 30,
-          duration: 0.4
+          type: "tween"
         });
-      });
     }
     // Arc path for transitions between adjacent categories (Land↔Water, Water↔Kids)
     else if (
@@ -131,9 +108,7 @@ export default function CategoryArcNav({ active, onSelect }: Props) {
       
       // Animate to the destination angle along the arc
       animate(angle, toPosition.angle, {
-        type: "spring",
-        stiffness: 300,
-        damping: 30,
+        type: "tween"
       });
     }
     // Default fallback - straight line for any other transition
@@ -145,8 +120,8 @@ export default function CategoryArcNav({ active, onSelect }: Props) {
       y.set(fromPosition.y);
       
       // Animate to destination position
-      animate(x, toPosition.x, { type: "spring", stiffness: 300, damping: 30 });
-      animate(y, toPosition.y, { type: "spring", stiffness: 300, damping: 30 });
+      animate(x, toPosition.x, { type: "tween"});
+      animate(y, toPosition.y, { type: "tween"});
     }
 
     setPrevActive(active);
