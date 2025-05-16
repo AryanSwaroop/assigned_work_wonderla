@@ -23,9 +23,9 @@ const Header = () => {
         <div className="container mx-auto px-4 py-3 flex items-center justify-between">
           <div className="flex items-center">
             <img 
-              src="https://wonderla.com/images/logo.png" 
+              src="/wonderla.png" 
               alt="Wonderla" 
-              className="h-10 cursor-pointer"
+              className="h-12 cursor-pointer"
               onClick={() => navigate('/')}
             />
           </div>
@@ -99,7 +99,7 @@ const Header = () => {
               transition={{ type: 'spring', stiffness: 300, damping: 30 }}
             >
               <div className="p-5 border-b flex items-center justify-between">
-                <img src="https://wonderla.com/images/logo.png" alt="Wonderla" className="h-8" />
+                <img src="/wonderla.png" alt="Wonderla" className="h-20" />
                 <Button variant="ghost" size="icon" onClick={() => setIsMenuOpen(false)}>
                   <X className="h-6 w-6 text-gray-600" />
                 </Button>

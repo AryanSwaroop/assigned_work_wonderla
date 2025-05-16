@@ -12,7 +12,7 @@ const Index = () => {
     <div className="min-h-screen flex flex-col bg-[#171f38]">
       <Header />
       
-      <div className="flex-1 container mx-auto px-4 flex flex-col items-center justify-center py-16 mt-16">
+      <div className="flex-1 container mx-auto px-4 flex flex-col items-center justify-center py-16 mt-48">
         <div className="bg-[#0066b3]/20 p-8 rounded-2xl backdrop-blur-sm max-w-2xl w-full text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">Welcome to Wonderla</h1>
           <p className="text-lg md:text-xl text-white/80 max-w-lg mx-auto mb-10">
