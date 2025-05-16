@@ -54,23 +54,6 @@ Installation
 
     Open http://localhost:3000 in your browser to see the application.
 
-Project Structure
-
-
-assigned_work_wonderla/
-├── components/           # Reusable UI components
-│   ├── Header.jsx        # Main navigation header
-│   ├── Footer.jsx        # Site footer with selected rides count
-│   ├── CategoryArcNav.jsx # Side navigation for ride categories
-│   └── ui/               # UI component library
-├── pages/                # Application pages
-│   ├── _app.js           # Next.js App component
-│   ├── index.js          # Homepage
-│   └── rides/            # Ride-related pages
-├── public/               # Static assets
-├── styles/               # Global styles and Tailwind config
-└── ...
-
 Customization
 Adding New Rides
 
