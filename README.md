@@ -52,7 +52,7 @@ Installation
     # or
     yarn dev
 
-    Open http://localhost:3000 in your browser to see the application.
+    Open http://localhost:8080 in your browser to see the application.
 
 Customization
 Adding New Rides
