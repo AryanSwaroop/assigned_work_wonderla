@@ -56,6 +56,7 @@ Installation
 
 Project Structure
 
+
 assigned_work_wonderla/
 ├── components/           # Reusable UI components
 │   ├── Header.jsx        # Main navigation header
