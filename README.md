@@ -19,7 +19,7 @@ Tech Stack
     Styling: Tailwind CSS
     UI Components: Custom shadcn/ui components
     State Management: React Hooks (useState)
-    Animations: CSS transitions and transforms
+    Animations: CSS transitions and transforms and framer-motion
 
 Getting Started
 Prerequisites
