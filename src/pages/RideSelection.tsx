@@ -21,7 +21,7 @@ interface Ride {
 }
 
 const RideSelection = () => {
-  const [activeCategory, setActiveCategory] = useState<'Land' | 'Water' | 'Kids'>('Land');
+  const [activeCategory, setActiveCategory] = useState("Land");
 
   const rides: Ride[] = [
     // LAND RIDES
@@ -284,11 +284,11 @@ const RideSelection = () => {
 
         {/* Main Content */}
         <div className="container mx-auto px-4 md:px-20">
-          <h1 className="text-4xl md:text-6xl font-bold text-white text-center mt-36 mb-12">
+          <h1 className="text-6xl ml-56  md:text-8xl font-bold text-white text-center mt-36 mb-12">
             OUR ICONIC RIDES
           </h1>
 
-          <Carousel className="relative ml-96">
+          <Carousel className="relative ml-80">
             <CarouselContent className="-ml-6 transition-transform ease-linear duration-150">
               {filteredRides.map((ride) => (
                 <CarouselItem
